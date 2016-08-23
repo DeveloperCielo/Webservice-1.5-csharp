@@ -1,16 +1,15 @@
 ﻿using System;
-using System.Xml.Serialization;
 using System.IO;
-using System.Text;
+using System.Xml.Serialization;
 
-namespace Cielo.Request.Element
+namespace CieloEcommerce.Request.Element
 {
 	public class AbstractElement
 	{
-		[XmlAttributeAttribute ()]
+		[XmlAttribute ()]
 		public String id { get; set; }
 
-		[XmlAttributeAttribute ()]
+		[XmlAttribute ()]
 		public String versao { get; set; }
 
 		protected T unserializeElement<T> (T element, String response)

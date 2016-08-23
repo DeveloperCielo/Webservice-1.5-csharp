@@ -1,21 +1,19 @@
 ﻿using System;
-using Cielo.Request.Element;
-using System;
-using System.Xml.Serialization;
 using System.ComponentModel;
+using System.Xml.Serialization;
+using CieloEcommerce.Request.Element;
 
-
-namespace Cielo.Request
+namespace CieloEcommerce.Request
 {
-    [SerializableAttribute()]
-    [DesignerCategoryAttribute("code")]
-    [XmlTypeAttribute(Namespace = "http://ecommerce.cbmp.com.br")]
-    [XmlRootAttribute("requisicao-consulta", Namespace = "http://ecommerce.cbmp.com.br", IsNullable = false)]
+    [Serializable()]
+    [DesignerCategory("code")]
+    [XmlType(Namespace = "http://ecommerce.cbmp.com.br")]
+    [XmlRoot("requisicao-consulta", Namespace = "http://ecommerce.cbmp.com.br", IsNullable = false)]
     public partial class ConsultationRequest : AbstractElement
     {
         public String tid { get; set; }
 
-        [XmlElementAttribute("dados-ec")]
+        [XmlElement("dados-ec")]
         public DadosEcElement dadosEc { get; set; }
 
         public static ConsultationRequest create(String tid, Merchant merchant)

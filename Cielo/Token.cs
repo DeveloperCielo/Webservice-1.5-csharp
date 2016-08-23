@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Cielo
+namespace CieloEcommerce
 {
 	/// <summary>
 	/// Representa um token do cartão do cliente para que possa ser armazenado

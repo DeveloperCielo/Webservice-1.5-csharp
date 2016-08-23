@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Cielo
+namespace CieloEcommerce
 {
     /// <summary>
     /// Classe para captura do erro no XML

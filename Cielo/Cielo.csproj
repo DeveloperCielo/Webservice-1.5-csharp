@@ -5,8 +5,8 @@
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProjectGuid>{69CC7192-A7E2-4990-9C99-430B4E822DA0}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>Cielo</RootNamespace>
-    <AssemblyName>Cielo</AssemblyName>
+    <RootNamespace>CieloEcommerce</RootNamespace>
+    <AssemblyName>CieloEcommerce</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <Description>Integração em C# com o Webservice Cielo 1.</Description>
   </PropertyGroup>
@@ -21,7 +21,7 @@
     <Externalconsole>true</Externalconsole>
     <PlatformTarget>x86</PlatformTarget>
     <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
-    <DocumentationFile>bin\Debug\Cielo.xml</DocumentationFile>
+    <DocumentationFile>bin\Debug\CieloEcommerce.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
     <Optimize>true</Optimize>
@@ -30,7 +30,7 @@
     <WarningLevel>4</WarningLevel>
     <Externalconsole>true</Externalconsole>
     <PlatformTarget>x86</PlatformTarget>
-    <DocumentationFile>bin\Release\Cielo.xml</DocumentationFile>
+    <DocumentationFile>bin\Release\CieloEcommerce.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />

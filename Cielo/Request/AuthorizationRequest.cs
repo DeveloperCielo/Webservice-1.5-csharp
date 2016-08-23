@@ -1,20 +1,20 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Xml.Serialization;
-using Cielo.Request.Element;
+using CieloEcommerce.Request.Element;
 
-namespace Cielo.Request
+namespace CieloEcommerce.Request
 {
-	[SerializableAttribute ()]
-	[DesignerCategoryAttribute ("code")]
-	[XmlTypeAttribute (Namespace = "http://ecommerce.cbmp.com.br")]
-	[XmlRootAttribute ("requisicao-autorizacao-tid", Namespace = "http://ecommerce.cbmp.com.br", IsNullable = false)]
+	[Serializable ()]
+	[DesignerCategory ("code")]
+	[XmlType (Namespace = "http://ecommerce.cbmp.com.br")]
+	[XmlRoot ("requisicao-autorizacao-tid", Namespace = "http://ecommerce.cbmp.com.br", IsNullable = false)]
 	public partial class AuthorizationRequest :AbstractElement
 	{
-		[XmlElementAttribute ("tid")]
+		[XmlElement ("tid")]
 		public String tid { get; set; }
 
-		[XmlElementAttribute ("dados-ec")]
+		[XmlElement ("dados-ec")]
 		public DadosEcElement dadosEc { get; set; }
 
 		public static AuthorizationRequest create (Transaction transaction)

@@ -1,6 +1,7 @@
 ﻿using Cielo;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
+using CieloEcommerce;
 
 namespace TesteUnidadeCielo
 {
@@ -10,7 +11,7 @@ namespace TesteUnidadeCielo
         [TestMethod]
         public void TestarTransacao()
         {
-            var cielo = new Cielo.Cielo(ConfigApp.mid, ConfigApp.key, ConfigApp.UrlCieloEcommerce);
+            var cielo = new CieloEcommerce.Cielo(ConfigApp.mid, ConfigApp.key, ConfigApp.UrlCieloEcommerce);
 
             var holder = cielo.holder("4012001038443335", "2018", "05", "123");
             holder.name = "Fulano Portador da Silva";
@@ -37,7 +38,7 @@ namespace TesteUnidadeCielo
         [TestMethod]
         public void TestarTransacaoComToken()
         {
-            var cielo = new Cielo.Cielo(ConfigApp.mid, ConfigApp.key, ConfigApp.UrlCieloEcommerce);
+            var cielo = new CieloEcommerce.Cielo(ConfigApp.mid, ConfigApp.key, ConfigApp.UrlCieloEcommerce);
 
             var holder = cielo.holder("4012001038443335", "2018", "05", "123");
             holder.name = "Fulano Portador da Silva";
@@ -66,7 +67,7 @@ namespace TesteUnidadeCielo
         [TestMethod]
         public void TestarCancelarTransacao()
         {
-            var cielo = new Cielo.Cielo(ConfigApp.mid, ConfigApp.key, ConfigApp.UrlCieloEcommerce);
+            var cielo = new CieloEcommerce.Cielo(ConfigApp.mid, ConfigApp.key, ConfigApp.UrlCieloEcommerce);
 
             //executa uma transacao
             #region Transacao de teste

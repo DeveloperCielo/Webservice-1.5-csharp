@@ -1,11 +1,10 @@
 ﻿using System;
-using System.ComponentModel;
 using System.Xml.Serialization;
 
-namespace Cielo.Request.Element
+namespace CieloEcommerce.Request.Element
 {
-	[SerializableAttribute ()]
-	[XmlTypeAttribute (Namespace = "http://ecommerce.cbmp.com.br")]
+	[Serializable ()]
+	[XmlType (Namespace = "http://ecommerce.cbmp.com.br")]
 	public partial class DadosPortadorElement :AbstractElement
 	{
 		public String numero { get; set; }
@@ -14,10 +13,10 @@ namespace Cielo.Request.Element
 
 		public String indicador { get; set; }
 
-		[XmlElementAttribute ("codigo-seguranca")]
+		[XmlElement ("codigo-seguranca")]
 		public String codigoSeguranca { get; set; }
 
-		[XmlElementAttribute ("nome-portador")]
+		[XmlElement ("nome-portador")]
 		public String nomePortador { get; set; }
 
 		public String token { get; set; }

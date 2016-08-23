@@ -1,39 +1,38 @@
 ﻿using System;
-using System.ComponentModel;
 using System.Xml.Serialization;
-using Cielo.Request.Element;
+using CieloEcommerce.Request.Element;
 
-namespace Cielo.Request
+namespace CieloEcommerce.Request
 {
-	[SerializableAttribute ()]
-	[XmlRootAttribute ("requisicao-transacao", Namespace = "http://ecommerce.cbmp.com.br", IsNullable = false)]
+	[Serializable ()]
+	[XmlRoot ("requisicao-transacao", Namespace = "http://ecommerce.cbmp.com.br", IsNullable = false)]
 	public partial class TransactionRequest :AbstractElement
 	{
-		[XmlElementAttribute ("dados-ec")]
+		[XmlElement ("dados-ec")]
 		public DadosEcElement dadosEc { get; set; }
 
-		[XmlElementAttribute ("dados-portador")]
+		[XmlElement ("dados-portador")]
 		public DadosPortadorElement dadosPortador { get; set; }
 
-		[XmlElementAttribute ("dados-pedido")]
+		[XmlElement ("dados-pedido")]
 		public DadosPedidoElement dadosPedido { get; set; }
 
-		[XmlElementAttribute ("forma-pagamento")]
+		[XmlElement ("forma-pagamento")]
 		public FormaPagamentoElement formaPagamento { get; set; }
 
-		[XmlElementAttribute ("url-retorno")]
+		[XmlElement ("url-retorno")]
 		public String urlRetorno { get; set; }
 
 		public int autorizar { get; set; }
 
 		public String capturar { get; set; }
 
-		[XmlElementAttribute ("campo-livre")]
+		[XmlElement ("campo-livre")]
 		public String campoLivre { get; set; }
 
 		public String bin { get; set; }
 
-		[XmlElementAttribute ("gerar-token")]
+		[XmlElement ("gerar-token")]
 		public String gerarToken { get; set; }
 
         public static TransactionRequest create (Transaction transaction)
