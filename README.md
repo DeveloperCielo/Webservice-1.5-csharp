@@ -2,12 +2,6 @@
 
 Integração em C# com o Webservice Cielo 1.5
 
-## Setup
-
-Se preferir você pode pegar a versão mais recente diretamente do [pacote disponível](https://www.nuget.org/packages/CieloOficial/) na galeria do NuGet.
-
-> PM Install-Package CieloOficial
-
 ## Criando uma transação
 
 ```csharp
