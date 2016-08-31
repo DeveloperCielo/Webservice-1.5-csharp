@@ -4,10 +4,10 @@ using System.Net;
 using System.Text;
 using System.Xml;
 using System.Xml.Serialization;
-using Cielo.Request;
-using Cielo.Request.Element;
+using CieloEcommerce.Request;
+using CieloEcommerce.Request.Element;
 
-namespace Cielo
+namespace CieloEcommerce
 {
 	/// <summary>
 	/// Integração com o Webservice 1.5 da Cielo; esse participante faz um

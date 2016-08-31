@@ -1,28 +1,25 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Xml.Serialization;
 
-namespace Cielo.Request.Element
+namespace CieloEcommerce.Request.Element
 {
-    [SerializableAttribute()]
-    [XmlTypeAttribute(Namespace = "http://ecommerce.cbmp.com.br")]
+    [Serializable()]
+    [XmlType(Namespace = "http://ecommerce.cbmp.com.br")]
     public class TokenElement : AbstractElement
     {
-        [XmlTypeAttribute(Namespace = "http://ecommerce.cbmp.com.br")]
+        [XmlType(Namespace = "http://ecommerce.cbmp.com.br")]
         public partial class DadosTokenElement
         {
-            [XmlElementAttribute("codigo-token")]
+            [XmlElement("codigo-token")]
             public String codigoToken { get; set; }
 
             public int status { get; set; }
 
-            [XmlElementAttribute("numero-cartao-truncado")]
+            [XmlElement("numero-cartao-truncado")]
             public String numeroTruncado { get; set; }
         }
 
-        [XmlElementAttribute("dados-token")]
+        [XmlElement("dados-token")]
         public DadosTokenElement dadosToken { get; set; }
 
         public Token ToToken()

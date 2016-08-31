@@ -1,20 +1,20 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Xml.Serialization;
-using Cielo.Request.Element;
+using CieloEcommerce.Request.Element;
 
-namespace Cielo.Request
+namespace CieloEcommerce.Request
 {
-	[SerializableAttribute ()]
-	[DesignerCategoryAttribute ("code")]
-	[XmlTypeAttribute (Namespace = "http://ecommerce.cbmp.com.br")]
-	[XmlRootAttribute ("requisicao-token", Namespace = "http://ecommerce.cbmp.com.br", IsNullable = false)]
+	[Serializable ()]
+	[DesignerCategory ("code")]
+	[XmlType (Namespace = "http://ecommerce.cbmp.com.br")]
+	[XmlRoot ("requisicao-token", Namespace = "http://ecommerce.cbmp.com.br", IsNullable = false)]
 	public partial class TokenRequest :AbstractElement
 	{
-		[XmlElementAttribute ("dados-ec")]
+		[XmlElement ("dados-ec")]
 		public DadosEcElement dadosEc { get; set; }
 
-		[XmlElementAttribute ("dados-portador")]
+		[XmlElement ("dados-portador")]
 		public DadosPortadorElement dadosPortador { get; set; }
 
 		public static TokenRequest create (Transaction transaction)

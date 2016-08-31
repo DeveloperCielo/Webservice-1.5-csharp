@@ -1,21 +1,20 @@
 ﻿using System;
-using System.ComponentModel;
 using System.Xml.Serialization;
 
-namespace Cielo.Request.Element
+namespace CieloEcommerce.Request.Element
 {
-    [SerializableAttribute()]
-    [XmlRootAttribute("transacao", Namespace = "http://ecommerce.cbmp.com.br", IsNullable = false)]
+    [Serializable()]
+    [XmlRoot("transacao", Namespace = "http://ecommerce.cbmp.com.br", IsNullable = false)]
     public partial class TransacaoElement : AbstractElement
     {
         public String tid { get; set; }
 
         public String pan { get; set; }
 
-        [XmlElementAttribute("dados-pedido")]
+        [XmlElement("dados-pedido")]
         public DadosPedidoElement dadosPedido { get; set; }
 
-        [XmlElementAttribute("forma-pagamento")]
+        [XmlElement("forma-pagamento")]
         public FormaPagamentoElement formaPagamento { get; set; }
 
         public String status;
@@ -24,7 +23,7 @@ namespace Cielo.Request.Element
 
         public AutorizacaoElement autorizacao { get; set; }
 
-        [XmlElementAttribute("url-autenticacao")]
+        [XmlElement("url-autenticacao")]
         public String urlAutenticacao;
 
         public TokenElement token { get; set; }

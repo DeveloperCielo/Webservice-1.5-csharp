@@ -1,11 +1,10 @@
 ﻿using System;
-using System.ComponentModel;
 using System.Xml.Serialization;
 
-namespace Cielo.Request.Element
+namespace CieloEcommerce.Request.Element
 {
-	[SerializableAttribute ()]
-	[XmlTypeAttribute (Namespace = "http://ecommerce.cbmp.com.br")]
+	[Serializable ()]
+	[XmlType (Namespace = "http://ecommerce.cbmp.com.br")]
 	public partial class FormaPagamentoElement
 	{
 		public String bandeira { get; set; }

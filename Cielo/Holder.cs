@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Cielo
+namespace CieloEcommerce
 {
 	/// <summary>
 	/// Representação do portador de um cartão

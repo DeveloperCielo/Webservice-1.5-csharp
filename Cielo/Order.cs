@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Cielo
+namespace CieloEcommerce
 {
 	/// <summary>
 	/// Representa um pedido que a loja enviará para autorização na Cielo

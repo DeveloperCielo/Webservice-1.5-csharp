@@ -1,11 +1,10 @@
 ﻿using System;
-using System.ComponentModel;
 using System.Xml.Serialization;
 
-namespace Cielo.Request.Element
+namespace CieloEcommerce.Request.Element
 {
-	[SerializableAttribute ()]
-	[XmlTypeAttribute (Namespace = "http://ecommerce.cbmp.com.br")]
+	[Serializable ()]
+	[XmlType (Namespace = "http://ecommerce.cbmp.com.br")]
 	public partial class DadosPedidoElement :AbstractElement
 	{
 		public String numero { get; set; }
@@ -14,19 +13,19 @@ namespace Cielo.Request.Element
 
 		public int moeda { get; set; }
 
-		[XmlElementAttribute ("data-hora")]
+		[XmlElement ("data-hora")]
 		public String dataHora { get; set; }
 
-		[XmlElementAttribute ("descricao", IsNullable = false)]
+		[XmlElement ("descricao", IsNullable = false)]
 		public String descricao { get; set; }
 
-		[XmlElementAttribute ("idioma", IsNullable = false)]
+		[XmlElement ("idioma", IsNullable = false)]
 		public String idioma { get; set; }
 
-		[XmlElementAttribute ("taxa-embarque", IsNullable = false)]
+		[XmlElement ("taxa-embarque", IsNullable = false)]
 		public int taxaEmbarque { get; set; }
 
-		[XmlElementAttribute ("soft-descriptor")]
+		[XmlElement ("soft-descriptor")]
 		public String softDescriptor { get; set; }
 
 		public Order ToOrder ()

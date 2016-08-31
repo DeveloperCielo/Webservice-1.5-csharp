@@ -5,6 +5,8 @@ Integração em C# com o Webservice Cielo 1.5
 ## Criando uma transação
 
 ```csharp
+using CieloEcommerce;
+//...
 String mid = "1006993069";
 String key = "25fbb99741c739dd84d7b06ec78c9bac718838630f30b112d033ce2e621b34f3";
 
@@ -33,6 +35,7 @@ Transaction transaction = cielo.transactionRequest (
 ## Criando uma transação e enviando para autorização
 
 ```csharp
+using CieloEcommerce;
 //...
 
 try {
@@ -59,6 +62,7 @@ try {
 ## Exemplo de consulta
 
 ```csharp
+using CieloEcommerce;
 //...
 
 
@@ -73,6 +77,7 @@ try {
 ## Cancelamento total de uma transação
 
 ```csharp
+using CieloEcommerce;
 //...
 
 
@@ -87,6 +92,7 @@ try {
 ## Captura total de uma transação
 
 ```csharp
+using CieloEcommerce;
 //...
 
 
@@ -101,6 +107,7 @@ try {
 ## Captura parcial de uma transação
 
 ```csharp
+using CieloEcommerce;
 //...
 
 

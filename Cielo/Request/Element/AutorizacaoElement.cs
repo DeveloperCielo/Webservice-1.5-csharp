@@ -1,18 +1,17 @@
 ﻿using System;
-using System.ComponentModel;
 using System.Xml.Serialization;
 
-namespace Cielo.Request.Element
+namespace CieloEcommerce.Request.Element
 {
-	[SerializableAttribute ()]
-	[XmlTypeAttribute (Namespace = "http://ecommerce.cbmp.com.br")]
+	[Serializable ()]
+	[XmlType (Namespace = "http://ecommerce.cbmp.com.br")]
 	public partial class AutorizacaoElement :AbstractElement
 	{
 		public int codigo { get; set; }
 
 		public String mensagem { get; set; }
 
-		[XmlElementAttribute ("data-hora")]
+		[XmlElement ("data-hora")]
 		public String dataHora { get; set; }
 
 		public int valor { get; set; }

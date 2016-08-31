@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Cielo
+namespace CieloEcommerce
 {
 	/// <summary>
 	/// Representa o vendedor ou ponto de venda

@@ -1,29 +1,28 @@
 ﻿using System;
-using System.ComponentModel;
 using System.Xml.Serialization;
 
-namespace Cielo.Request.Element
+namespace CieloEcommerce.Request.Element
 {
-	[SerializableAttribute ()]
-	[XmlRootAttribute ("retorno-token", Namespace = "http://ecommerce.cbmp.com.br", IsNullable = false)]
+	[Serializable ()]
+	[XmlRoot ("retorno-token", Namespace = "http://ecommerce.cbmp.com.br", IsNullable = false)]
 	public class RetornoTokenElement :AbstractElement
 	{
-		[XmlTypeAttribute (Namespace = "http://ecommerce.cbmp.com.br")]
+		[XmlType (Namespace = "http://ecommerce.cbmp.com.br")]
 		public partial class DadosTokenElement
 		{
-			[XmlElementAttribute ("codigo-token")]
+			[XmlElement ("codigo-token")]
 			public String codigoToken { get; set; }
 
 			public int status { get; set; }
 
-			[XmlElementAttribute ("numero-cartao-truncado")]
+			[XmlElement ("numero-cartao-truncado")]
 			public String numeroTruncado { get; set; }
 		}
 
-		[XmlTypeAttribute (Namespace = "http://ecommerce.cbmp.com.br")]
+		[XmlType (Namespace = "http://ecommerce.cbmp.com.br")]
 		public partial class TokenElement
 		{
-			[XmlElementAttribute ("dados-token")]
+			[XmlElement ("dados-token")]
 			public DadosTokenElement dadosToken { get; set; }
 		}
 
