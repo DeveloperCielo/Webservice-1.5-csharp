@@ -178,7 +178,9 @@ namespace CieloEcommerce
 			request.Method = "POST";
 			request.ContentType = "application/x-www-form-urlencoded";
 
-			using (Stream stream = request.GetRequestStream ()) {
+            System.Net.ServicePointManager.SecurityProtocol = System.Net.SecurityProtocolType.Tls12;
+
+            using (Stream stream = request.GetRequestStream ()) {
 				UTF8Encoding encoding = new UTF8Encoding ();
 				byte[] bytes = encoding.GetBytes ("mensagem=" + message);
 
