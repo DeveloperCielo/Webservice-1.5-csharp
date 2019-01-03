@@ -47,14 +47,18 @@ namespace CieloEcommerce
 		{
 			this.merchant = new Merchant (id, key);
 			this.endpoint = endpoint;
-		}
 
-		/// <summary>
-		/// Cria uma instância de Cielo.Holder, que representa o portador de um cartão,
-		/// apenas definindo o token previamente gerado.
-		/// </summary>
-		/// <param name="token">Token.</param>
-		public Holder holder (String token)
+            System.Net.ServicePointManager.SecurityProtocol = System.Net.SecurityProtocolType.Tls12 | System.Net.SecurityProtocolType.Tls11 | System.Net.SecurityProtocolType.Tls | System.Net.SecurityProtocolType.Ssl3;
+            ServicePointManager.DnsRefreshTimeout = 0;
+            ServicePointManager.ServerCertificateValidationCallback += delegate { return true; };
+        }
+
+        /// <summary>
+        /// Cria uma instância de Cielo.Holder, que representa o portador de um cartão,
+        /// apenas definindo o token previamente gerado.
+        /// </summary>
+        /// <param name="token">Token.</param>
+        public Holder holder (String token)
 		{
 			return new Holder (token);
 		}
@@ -178,7 +182,7 @@ namespace CieloEcommerce
 			request.Method = "POST";
 			request.ContentType = "application/x-www-form-urlencoded";
 
-			using (Stream stream = request.GetRequestStream ()) {
+            using (Stream stream = request.GetRequestStream ()) {
 				UTF8Encoding encoding = new UTF8Encoding ();
 				byte[] bytes = encoding.GetBytes ("mensagem=" + message);
 
